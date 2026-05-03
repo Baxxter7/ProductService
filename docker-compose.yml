@@ -1,0 +1,9 @@
+services:
+  product-services:
+    build:
+      context: ./ProductService
+    ports:
+      - "8001:8080"
+    environment: 
+      - ASPNETCORE_ENVIROMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=host.docker.internal;Database=ProductDb;User Id=jmartinez;Password=Password123!;Encrypt=False;TrustServerCertificate=True;
