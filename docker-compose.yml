@@ -7,3 +7,12 @@ services:
     environment: 
       - ASPNETCORE_ENVIROMENT=Development
       - ConnectionStrings__DefaultConnection=Server=host.docker.internal;Database=ProductDb;User Id=jmartinez;Password=Password123!;Encrypt=False;TrustServerCertificate=True;
+  
+  order-services:
+    build:
+      context: ./OrderService
+    ports:
+      - "8002:8080"
+    environment: 
+      - ASPNETCORE_ENVIROMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=host.docker.internal;Database=OrderDb;User Id=jmartinez;Password=Password123!;Encrypt=False;TrustServerCertificate=True;
