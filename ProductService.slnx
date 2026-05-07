@@ -1,3 +1,4 @@
 <Solution>
+  <Project Path="OrderService/OrderService.csproj" Id="8b4bba1b-b82d-4450-b5fd-6b66d207bb14" />
   <Project Path="ProductService/ProductService.csproj" />
 </Solution>
